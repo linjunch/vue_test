@@ -9,6 +9,7 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String
+    // changeMsg,
   }
 };
 </script>
