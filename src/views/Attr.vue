@@ -24,9 +24,9 @@ export default {
     }
   },
   watch: {
-    // "$route.path": function() {
-    //   console.log(this.$route.path);
-    // }
+    "$route.path": function() {
+      console.log(this.$route.path);
+    }
   },
   props: {},
   methods: {}

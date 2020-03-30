@@ -6,7 +6,8 @@
       <router-link to="/axios">Axios</router-link> |
       <router-link to="/comment">Comment</router-link> |
       <router-link to="/attr">Attr</router-link> |
-      <router-link to="/router" exac>Router</router-link>
+      <router-link to="/router" exac>Router</router-link> |
+      <router-link to="/vuexx" exac>Vuexx</router-link>
     </div>
     <transition enter-active-class="animated lightSpeedIn">
       <router-view />

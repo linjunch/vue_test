@@ -30,9 +30,11 @@ export default {
     CommentBox
   },
   methods: {
+    // 通过$emit传递参数给父组件触发
     addItem(name, info) {
       this.msgList.push({ name, info });
     },
+    // 通过$emit传递触发事件给父组件 然后根据ref获取组件的data
     add() {
       // const { name, info } = this.$refs.myCommentBox;
       this.msgList.push({

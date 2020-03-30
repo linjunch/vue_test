@@ -41,6 +41,14 @@ const routes = [
     }
   },
   {
+    path: "/vuexx",
+    name: "Vuexx",
+    component: () => import("../views/Vuexx.vue"),
+    meta: {
+      title: "Vuexx"
+    }
+  },
+  {
     path: "/attr",
     name: "Attr",
     component: () => import("../views/Attr.vue"),
