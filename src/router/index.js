@@ -33,6 +33,14 @@ const routes = [
     }
   },
   {
+    path: "/lin",
+    name: "Lin",
+    component: () => import("../views/Lin.vue"),
+    meta: {
+      title: "Lin"
+    }
+  },
+  {
     path: "/comment",
     name: "Comment",
     component: () => import("../views/Comment.vue"),
