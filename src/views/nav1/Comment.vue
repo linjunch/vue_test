@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import List from "@/components/List.vue";
-import CommentBox from "@/components/commentBox.vue";
+import List from '@/components/List.vue';
+import CommentBox from '@/components/commentBox.vue';
 
 export default {
-  name: "Comment",
+  name: 'Comment',
   data() {
     return {
-      msgList: [{ name: "lin", info: "干他妈的React" }]
+      msgList: [{ name: 'lin', info: '干他妈的React' }]
     };
   },
   components: {
@@ -41,9 +41,9 @@ export default {
         name: this.$refs.myCommentBox.name,
         info: this.$refs.myCommentBox.info
       });
-      this.$refs.myCommentBox.name = "";
+      this.$refs.myCommentBox.name = '';
       // name = "";
-      this.$refs.myCommentBox.info = "";
+      this.$refs.myCommentBox.info = '';
       // info = "";
     },
     deleteItem(name) {

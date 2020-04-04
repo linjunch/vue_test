@@ -19,24 +19,24 @@
         @input="setName({ name: $event })"
         style="width:200px"
       />
-      <h2>称呼：{{ computeName("Mr.") }}</h2>
+      <h2>称呼：{{ computeName('Mr.') }}</h2>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from "vuex";
+import { mapState, mapGetters, mapMutations } from 'vuex';
 export default {
-  name: "Vuexx",
+  name: 'Vuexx',
   data() {
     return {};
   },
   methods: {
-    ...mapMutations(["addNum", "setStr", "setValue", "setName"])
+    ...mapMutations(['addNum', 'setStr', 'setValue', 'setName'])
   },
   computed: {
-    ...mapState(["num", "str", "name", "value"]),
-    ...mapGetters(["computeStr", "computeValue", "computeName"])
+    ...mapState(['num', 'str', 'name', 'value']),
+    ...mapGetters(['computeStr', 'computeValue', 'computeName'])
   }
 };
 </script>

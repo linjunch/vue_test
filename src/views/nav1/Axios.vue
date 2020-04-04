@@ -29,14 +29,14 @@
   </div>
 </template>
 <script>
-import { getList, addItem, deleteItem } from "@/services";
+import { getList, addItem, deleteItem } from '@/services';
 
 export default {
-  name: "Axios",
+  name: 'Axios',
   data() {
     return {
-      name: "",
-      keyWorld: "",
+      name: '',
+      keyWorld: '',
       list: []
     };
   },
@@ -46,7 +46,7 @@ export default {
         // console.log(response);
         if (res.status === 200) {
           this.getAllList();
-          this.name = "";
+          this.name = '';
         }
       });
     },

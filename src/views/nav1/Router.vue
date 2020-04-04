@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "Router",
+  name: 'Router',
   data() {
     return {};
   },

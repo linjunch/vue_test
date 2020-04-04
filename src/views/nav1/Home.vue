@@ -5,43 +5,35 @@
       enter-active-class="animated jackInTheBox"
       leave-active-class="animated flip"
     >
-      <img alt="Vue logo" src="../assets/logo.png" v-show="flag" />
+      <img alt="Vue logo" src="../../assets/logo.png" v-show="flag" />
     </transition>
     <br />
     <a href="" @click.prevent="page = 'login'">登陆</a> |
     <a href="" @click.prevent="page = 'register'">注册</a>|
     <a href="" @click.prevent="page = 'detail'">详情</a>
-
-    <transition enter-active-class="animated flipInY">
-      <HelloWorld :msg="msg1" v-show="page === 'login'" />
-    </transition>
-    <transition enter-active-class="animated flipInY">
-      <HelloWorld :msg="msg2" v-show="page === 'register'"
-    /></transition>
-    <transition enter-active-class="animated flipInY">
-      <HelloWorld :msg="msg3" v-show="page === 'detail'" />
-    </transition>
-
+    <HelloWorld :msg="msg1" v-show="page === 'login'" />
+    <HelloWorld :msg="msg2" v-show="page === 'register'" />
+    <HelloWorld :msg="msg3" v-show="page === 'detail'" />
     <el-button @click="toggle">切换</el-button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     HelloWorld
   },
   data() {
     return {
       flag: true,
-      page: "login",
-      msg1: "Welcome to Your Login page",
-      msg2: "Welcome to Your register page",
-      msg3: "Welcome to Your detail page"
+      page: 'login',
+      msg1: 'Welcome to Your Login page',
+      msg2: 'Welcome to Your register page',
+      msg3: 'Welcome to Your detail page'
     };
   },
   methods: {

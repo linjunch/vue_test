@@ -1,13 +1,14 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <label
-      >id: <el-input style="width:200px" v-model="id" v-color="'deepskyblue'"
-    /></label>
-    <label
-      >name:
-      <el-input style="width:200px" v-model="name" @keyup.enter.native="add"
-    /></label>
+    <label>
+      id:
+      <el-input style="width:200px" v-model="id" v-color="'deepskyblue'" />
+    </label>
+    <label>
+      name:
+      <el-input style="width:200px" v-model="name" @keyup.enter.native="add" />
+    </label>
     <el-button @click="add">添加</el-button>
     <label>
       关键字查找：
@@ -15,9 +16,8 @@
     </label>
     <div :class="['tableList']">
       <el-table :data="search()" style="width: 100%">
-        <el-table-column prop="id" label="id" width="180"> </el-table-column>
-        <el-table-column prop="name" label="姓名" width="180">
-        </el-table-column>
+        <el-table-column prop="id" label="id" width="180"></el-table-column>
+        <el-table-column prop="name" label="姓名" width="180"></el-table-column>
         <el-table-column label="操作" width="180">
           <template slot-scope="scope">
             <el-button @click="del(scope.$index)" type="danger">删除</el-button>
@@ -28,7 +28,7 @@
     <!-- <input @keyup.enter="logxx" v-model="xx" /> -->
     <ul>
       <li v-for="item in list" :key="item.id">
-        {{ item.name | nameFormat("Mr.") }}
+        {{ item.name | nameFormat('Mr.') }}
       </li>
     </ul>
   </div>
@@ -40,18 +40,18 @@
 // });
 
 export default {
-  name: "Home",
+  name: 'Home',
   data() {
     return {
-      xx: "",
-      id: "",
-      name: "",
-      keyWorld: "",
+      xx: '',
+      id: '',
+      name: '',
+      keyWorld: '',
       list: [
-        { id: "1", name: "lin" },
-        { id: "2", name: "lu" },
-        { id: "3", name: "li" },
-        { id: "4", name: "huang" }
+        { id: '1', name: 'lin' },
+        { id: '2', name: 'lu' },
+        { id: '3', name: 'li' },
+        { id: '4', name: 'huang' }
       ]
     };
   },
@@ -64,8 +64,8 @@ export default {
       };
       if (this.id && this.name) {
         this.list.push(newItem);
-        this.id = "";
-        this.name = "";
+        this.id = '';
+        this.name = '';
       }
     },
     del(index) {

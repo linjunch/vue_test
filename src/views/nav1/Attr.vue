@@ -10,12 +10,12 @@
 
 <script>
 export default {
-  name: "Router",
+  name: 'Router',
   data() {
     return {
-      currentPage: "",
-      str1: "",
-      str2: ""
+      currentPage: '',
+      str1: '',
+      str2: ''
     };
   },
   computed: {
@@ -24,7 +24,7 @@ export default {
     }
   },
   watch: {
-    "$route.path": function() {
+    '$route.path': function() {
       console.log(this.$route.path);
     }
   },
