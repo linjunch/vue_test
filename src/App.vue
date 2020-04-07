@@ -15,9 +15,9 @@
       <router-link to="/vModel" tag="el-button">v-model</router-link>
       <router-link to="/user/lin" tag="el-button">我的</router-link>
       <router-link to="/myinfo" tag="el-button">我的信息</router-link>
-      <router-link to="/linxx" tag="el-button">linxx</router-link>|
-      <router-link to="/lincc" tag="el-button">lincc</router-link>|
-      <router-link to="/linf" tag="el-button">linf</router-link>|
+      <router-link to="/linxx" tag="el-button">linxx</router-link>
+      <router-link to="/lincc" tag="el-button">lincc</router-link>
+      <router-link to="/linf" tag="el-button">linf</router-link>
       <router-link to="/slotf" tag="el-button">slotf</router-link>
     </div>
     <!-- <transition enter-active-class="animated lightSpeedIn"> -->
@@ -65,7 +65,7 @@ export default {
 #nav,
 #nav2 {
   text-align: center;
-  padding: 30px;
+  padding: 10px;
 
   a {
     font-weight: bold;

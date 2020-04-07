@@ -118,33 +118,33 @@ export default {
   }
 };
 
-const obj = {
-  name: 'lin'
-};
+// const obj = {
+//   name: 'lin'
+// };
 
-function copy() {
-  return obj;
-}
-const obj1 = copy();
-const obj2 = copy();
-const obj3 = copy();
-obj1.name = 'ch';
-console.log(obj1); // ch
-console.log(obj2); // ch
-console.log(obj3); // ch
+// function copy() {
+//   return obj;
+// }
+// const obj1 = copy();
+// const obj2 = copy();
+// const obj3 = copy();
+// obj1.name = 'ch';
+// console.log(obj1); // ch
+// console.log(obj2); // ch
+// console.log(obj3); // ch
 
-function clone() {
-  return {
-    name: 'lin'
-  };
-}
-const clone1 = clone();
-const clone2 = clone();
-const clone3 = clone();
-clone1.name = 'ch';
-console.log(clone1); // ch
-console.log(clone2); // lin
-console.log(clone3); // lin
+// function clone() {
+//   return {
+//     name: 'lin'
+//   };
+// }
+// const clone1 = clone();
+// const clone2 = clone();
+// const clone3 = clone();
+// clone1.name = 'ch';
+// console.log(clone1); // ch
+// console.log(clone2); // lin
+// console.log(clone3); // lin
 </script>
 
 <style lang="less" scoped>

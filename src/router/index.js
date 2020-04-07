@@ -8,6 +8,7 @@ Vue.use(VueRouter);
 // this generates a separate chunk (about.[hash].js) for this route
 // which is lazy-loaded when the route is visited.
 const routes = [
+  // this is nav1
   {
     path: '/',
     name: 'Home',
@@ -25,22 +26,6 @@ const routes = [
     component: () => import('../views/nav1/About.vue')
   },
   {
-    path: '/user/:userId',
-    name: 'User',
-    meta: {
-      title: '我的'
-    },
-    component: () => import('../views/nav2/User.vue')
-  },
-  {
-    path: '/myinfo/',
-    name: 'myinfo',
-    meta: {
-      title: '我的信息'
-    },
-    component: () => import('../views/nav2/MyInfo.vue')
-  },
-  {
     path: '/axios',
     name: 'Axios',
     component: () => import('../views/nav1/Axios.vue'),
@@ -49,75 +34,11 @@ const routes = [
     }
   },
   {
-    path: '/lin',
-    name: 'Lin',
-    component: () => import('../views/nav1/Lin.vue'),
-    meta: {
-      title: 'Lin'
-    }
-  },
-  {
-    path: '/todoList',
-    name: 'TodoList',
-    component: () => import('../views/nav1/TodoList.vue'),
-    meta: {
-      title: 'TodoList'
-    }
-  },
-  {
-    path: '/vModel',
-    name: 'VModel',
-    component: () => import('../views/nav2/VModel.vue'),
-    meta: {
-      title: 'VModel'
-    }
-  },
-  {
     path: '/comment',
     name: 'Comment',
     component: () => import('../views/nav1/Comment.vue'),
     meta: {
       title: '评论'
-    }
-  },
-  {
-    path: '/vuexx',
-    name: 'Vuexx',
-    component: () => import('../views/nav1/Vuexx.vue'),
-    meta: {
-      title: 'Linf'
-    }
-  },
-  {
-    path: '/attr',
-    name: 'Attr',
-    component: () => import('../views/nav1/Attr.vue'),
-    meta: {
-      title: 'slotf'
-    }
-  },
-  {
-    path: '/linxx',
-    name: 'Linxx',
-    component: () => import('../views/nav2/Linxx.vue'),
-    meta: {
-      title: 'linxx'
-    }
-  },
-  {
-    path: '/lincc',
-    name: 'Lincc',
-    component: () => import('../views/nav2/Lincc.vue'),
-    meta: {
-      title: 'lincc'
-    }
-  },
-  {
-    path: '/vuexx',
-    name: 'Vuexx',
-    component: () => import('../views/nav1/Vuexx.vue'),
-    meta: {
-      title: 'Vuexx'
     }
   },
   {
@@ -147,6 +68,82 @@ const routes = [
     ]
   },
   {
+    path: '/lin',
+    name: 'Lin',
+    component: () => import('../views/nav1/Lin.vue'),
+    meta: {
+      title: 'Lin'
+    }
+  },
+  {
+    path: '/todoList',
+    name: 'TodoList',
+    component: () => import('../views/nav1/TodoList.vue'),
+    meta: {
+      title: 'TodoList'
+    }
+  },
+  // the next is nav2
+  {
+    path: '/vModel',
+    name: 'VModel',
+    component: () => import('../views/nav2/VModel.vue'),
+    meta: {
+      title: 'VModel'
+    }
+  },
+  {
+    path: '/user/:userId',
+    name: 'User',
+    meta: {
+      title: '我的'
+    },
+    component: () => import('../views/nav2/User.vue')
+  },
+  {
+    path: '/myinfo/',
+    name: 'myinfo',
+    meta: {
+      title: '我的信息'
+    },
+    component: () => import('../views/nav2/MyInfo.vue')
+  },
+  {
+    path: '/linxx',
+    name: 'Linxx',
+    component: () => import('../views/nav2/Linxx.vue'),
+    meta: {
+      title: 'linxx'
+    }
+  },
+
+  {
+    path: '/lincc',
+    name: 'Lincc',
+    component: () => import('../views/nav2/Lincc.vue'),
+    meta: {
+      title: 'lincc'
+    }
+  },
+
+  {
+    path: '/linf',
+    name: 'Linf',
+    component: () => import('../views/f&c/Linf.vue'),
+    meta: {
+      title: 'Linf'
+    }
+  },
+
+  {
+    path: '/vuexx',
+    name: 'Vuexx',
+    component: () => import('../views/nav1/Vuexx.vue'),
+    meta: {
+      title: 'Vuexx'
+    }
+  },
+  {
     path: '/router',
     name: 'Router',
     redirect: '/router/comment',
@@ -169,6 +166,14 @@ const routes = [
         }
       }
     ]
+  },
+  {
+    path: '/slotf',
+    name: 'Slotf',
+    component: () => import('../views/f&c/Slotf.vue'),
+    meta: {
+      title: 'slotf'
+    }
   }
 ];
 

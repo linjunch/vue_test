@@ -32,11 +32,11 @@ export default {
     return {};
   },
   methods: {
-    ...mapMutations(['addNum', 'setStr', 'setValue', 'setName'])
+    ...mapMutations('vm', ['addNum', 'setStr', 'setValue', 'setName'])
   },
   computed: {
-    ...mapState(['num', 'str', 'name', 'value']),
-    ...mapGetters(['computeStr', 'computeValue', 'computeName'])
+    ...mapState('vm', ['num', 'str', 'name', 'value']),
+    ...mapGetters('vm', ['computeStr', 'computeValue', 'computeName'])
   }
 };
 </script>

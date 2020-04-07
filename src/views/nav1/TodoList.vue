@@ -47,20 +47,20 @@
 
 <script>
 export default {
-  name: "TodoList",
+  name: 'TodoList',
   data() {
     return {
       list: [
-        { name: "算法导论", date: "2006-9", price: 85, num: 0, id: "book001" },
+        { name: '算法导论', date: '2006-9', price: 85, num: 0, id: 'book001' },
         {
-          name: "UNIx编程艺术",
-          date: "2006-2",
+          name: 'UNIx编程艺术',
+          date: '2006-2',
           price: 59,
           num: 0,
-          id: "book002"
+          id: 'book002'
         },
-        { name: "编程珠玑", date: "2008-10", price: 39, num: 0, id: "book003" },
-        { name: "代码大全", date: "2006-3", price: 128, num: 0, id: "book004" }
+        { name: '编程珠玑', date: '2008-10', price: 39, num: 0, id: 'book003' },
+        { name: '代码大全', date: '2006-3', price: 128, num: 0, id: 'book004' }
       ]
     };
   },
@@ -72,7 +72,7 @@ export default {
       this.list[index].num--;
     },
     del(index) {
-      confirm("are you sure to delete this item?") &&
+      confirm('are you sure to delete this item?') &&
         this.list.splice(index, 1);
     }
   },
