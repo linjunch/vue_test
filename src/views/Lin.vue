@@ -1,15 +1,15 @@
 <template>
   <div id="lin">
-    <!-- <ul class="list">
+    <ul class="list">
       <li
-        v-for="(value, index) in list"
-        :key="index"
-        :class="{ current: currentList.includes(value) }"
-        @click="selectThis(value)"
+        v-for="(item, index) in list"
+        :key="item.game"
+        :class="{ active: item.isActive }"
+        @click="selectThis(index)"
       >
-        {{ value }}
+        {{ item.game }}
       </li>
-    </ul> -->
+    </ul>
     <!-- <div>
       <ul class="list">
         <li
@@ -46,46 +46,46 @@
       <h2 v-else>{{ str2 }}</h2>
       <el-button @click="toggle">toggle</el-button>
     </div> -->
-    <ul class="list">
-      <li v-for="item in list" :key="item.game">{{ item.game }}</li>
-    </ul>
-    <ul class="list">
-      <li v-for="(item, index) in list" :key="index">
-        {{ index + 1 }}.{{ item.game }}
-      </li>
-    </ul>
-    <div>=========================================================</div>
-    <ul class="list">
-      <li v-for="value in obj" :key="value">
-        {{ value }}
-      </li>
-    </ul>
-    <ul class="list">
-      <li v-for="(value, key) in obj" :key="key">{{ key }}:{{ value }}</li>
-    </ul>
+    <!-- <div>
+      <ul class="list">
+        <li v-for="item in list" :key="item.game">{{ item.game }}</li>
+      </ul>
+      <ul class="list">
+        <li v-for="(item, index) in list" :key="item.game">
+          {{ index + 1 }}.{{ item.game }}
+        </li>
+      </ul>
+      <div>=========================================================</div>
+      <ul class="list">
+        <li v-for="value in obj" :key="value">
+          {{ value }}
+        </li>
+      </ul>
+      <ul class="list">
+        <li v-for="(value, key) in obj" :key="key">{{ key }}:{{ value }}</li>
+      </ul>
+    </div> -->
   </div>
 </template>
 
 <script>
-{
-  // export default {
-  //   name: "lin",
-  //   data() {
-  //     return {
-  //       list: ["dnf", "lol", "mc", "ow"],
-  //       currentList: []
-  //     };
-  //   },
-  //   methods: {
-  //     selectThis(value) {
-  //       const index = this.currentList.indexOf(value);
-  //       index > -1
-  //         ? this.currentList.splice(index, 1)
-  //         : this.currentList.push(value);
-  //     }
-  //   }
-  // };
-}
+// export default {
+//   name: "lin",
+//   data() {
+//     return {
+//       list: ["dnf", "lol", "mc", "ow"],
+//       currentList: []
+//     };
+//   },
+//   methods: {
+//     selectThis(value) {
+//       const index = this.currentList.indexOf(value);
+//       index > -1
+//         ? this.currentList.splice(index, 1)
+//         : this.currentList.push(value);
+//     }
+//   }
+// };
 
 export default {
   name: "lin",
@@ -96,23 +96,29 @@ export default {
         { game: "dnf", isActive: false },
         { game: "ow", isActive: false },
         { game: "mc", isActive: false }
-      ],
-      obj: {
-        name: "lin",
-        age: "18",
-        game: "炉石"
-      },
-      // firstName: "lin",
-      // lastName: "ch",
-      str1: "if flag is true, i am show",
-      str2: "if flag is false, i am show",
-      flag: true
+      ]
+      // list: [
+      //   { game: "lol", id: "id001" },
+      //   { game: "dnf", id: "id002" },
+      //   { game: "ow", id: "id003" },
+      //   { game: "mc", id: "id004" }
+      // ],
+      // obj: {
+      //   name: "lin",
+      //   age: "18",
+      //   game: "炉石"
+      // },
+      // // firstName: "lin",
+      // // lastName: "ch",
+      // str1: "if flag is true, i am show",
+      // str2: "if flag is false, i am show",
+      // flag: true
     };
   },
   methods: {
-    toggle() {
-      this.flag = !this.flag;
-    }
+    // toggle() {
+    //   this.flag = !this.flag;
+    // }
     // toggleClass(index) {
     //   const item = this.list[index];
     //   item.isActive = !item.isActive;
@@ -139,6 +145,9 @@ export default {
     //   console.log(event);
     //   console.log(x);
     // }
+    selectThis(index) {
+      this.list[index].isActive = !this.list[index].isActive;
+    }
   },
   computed: {
     // fullName() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="router">
+  <div class="attr">
     <el-input v-model="str1" /> + <el-input v-model="str2" /> =
     <el-input v-model="result" />
     <router-link to="/attr/comment">评论</router-link> |
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "Router",
+  name: "Attr",
   data() {
     return {
       currentPage: "",
@@ -41,5 +41,8 @@ a {
     // color: #42b983;
     color: deeppink;
   }
+}
+.attr {
+  text-align: center;
 }
 </style>

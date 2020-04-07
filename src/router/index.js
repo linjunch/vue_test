@@ -41,6 +41,22 @@ const routes = [
     }
   },
   {
+    path: "/todoList",
+    name: "TodoList",
+    component: () => import("../views/TodoList.vue"),
+    meta: {
+      title: "TodoList"
+    }
+  },
+  {
+    path: "/vModel",
+    name: "VModel",
+    component: () => import("../views/VModel.vue"),
+    meta: {
+      title: "VModel"
+    }
+  },
+  {
     path: "/comment",
     name: "Comment",
     component: () => import("../views/Comment.vue"),

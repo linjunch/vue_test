@@ -61,4 +61,7 @@ export default {
 //   opacity: 0;
 //   transform: translateY(-50px);
 // }
+.home {
+  text-align: center;
+}
 </style>

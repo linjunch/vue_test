@@ -8,8 +8,10 @@
       <router-link to="/attr">Attr</router-link> |
       <router-link to="/router" exac>Router</router-link> |
       <router-link to="/lin" exac>Lin</router-link> |
+      <router-link to="/todolist" exac>Todolist</router-link> |
       <router-link to="/vuexx" exac>Vuexx</router-link>
     </div>
+    <div id="nav2"><router-link to="/vModel">v-model</router-link> |</div>
     <transition enter-active-class="animated lightSpeedIn">
       <router-view />
     </transition>
@@ -24,7 +26,8 @@
   color: #2c3e50;
 }
 
-#nav {
+#nav,
+#nav2 {
   text-align: center;
   padding: 30px;
   a {
@@ -140,9 +143,7 @@ video,
 input {
   margin: 0;
   padding: 0;
-  border: 0;
   font-size: 100%;
-  font-weight: normal;
   vertical-align: baseline;
 }
 

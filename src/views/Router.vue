@@ -17,6 +17,9 @@ export default {
 };
 </script>
 <style lang="less">
+.router {
+  text-align: center;
+}
 a {
   font-weight: bold;
   color: #2c3e50;
