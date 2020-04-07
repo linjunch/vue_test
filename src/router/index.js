@@ -25,11 +25,51 @@ const routes = [
     component: () => import('../views/nav1/About.vue')
   },
   {
+    path: '/user/:userId',
+    name: 'User',
+    meta: {
+      title: '我的'
+    },
+    component: () => import('../views/nav2/User.vue')
+  },
+  {
+    path: '/myinfo/',
+    name: 'myinfo',
+    meta: {
+      title: '我的信息'
+    },
+    component: () => import('../views/nav2/MyInfo.vue')
+  },
+  {
     path: '/axios',
     name: 'Axios',
     component: () => import('../views/nav1/Axios.vue'),
     meta: {
       title: '阿西欧斯'
+    }
+  },
+  {
+    path: '/lin',
+    name: 'Lin',
+    component: () => import('../views/nav1/Lin.vue'),
+    meta: {
+      title: 'Lin'
+    }
+  },
+  {
+    path: '/todoList',
+    name: 'TodoList',
+    component: () => import('../views/nav1/TodoList.vue'),
+    meta: {
+      title: 'TodoList'
+    }
+  },
+  {
+    path: '/vModel',
+    name: 'VModel',
+    component: () => import('../views/nav2/VModel.vue'),
+    meta: {
+      title: 'VModel'
     }
   },
   {
@@ -41,17 +81,17 @@ const routes = [
     }
   },
   {
-    path: '/linf',
-    name: 'Linf',
-    component: () => import('../views/f&c/Linf.vue'),
+    path: '/vuexx',
+    name: 'Vuexx',
+    component: () => import('../views/nav1/Vuexx.vue'),
     meta: {
       title: 'Linf'
     }
   },
   {
-    path: '/slotf',
-    name: 'Slotf',
-    component: () => import('../views/f&c/Slotf.vue'),
+    path: '/attr',
+    name: 'Attr',
+    component: () => import('../views/nav1/Attr.vue'),
     meta: {
       title: 'slotf'
     }
@@ -133,7 +173,9 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  // 路由模式
+  mode: 'hash'
 });
 
 export default router;

@@ -40,7 +40,7 @@
 // });
 
 export default {
-  name: 'Home',
+  name: 'About',
   data() {
     return {
       xx: '',
@@ -103,5 +103,8 @@ export default {
   // display: inline-block;
   width: 540px;
   margin: 0 auto;
+}
+.about {
+  text-align: center;
 }
 </style>
