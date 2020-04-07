@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "../views/nav1/Home.vue";
 
 Vue.use(VueRouter);
 
@@ -22,12 +22,12 @@ const routes = [
     meta: {
       title: "关于我们"
     },
-    component: () => import("../views/About.vue")
+    component: () => import("../views/nav1/About.vue")
   },
   {
     path: "/axios",
     name: "Axios",
-    component: () => import("../views/Axios.vue"),
+    component: () => import("../views/nav1/Axios.vue"),
     meta: {
       title: "阿西欧斯"
     }
@@ -35,7 +35,7 @@ const routes = [
   {
     path: "/lin",
     name: "Lin",
-    component: () => import("../views/Lin.vue"),
+    component: () => import("../views/nav1/Lin.vue"),
     meta: {
       title: "Lin"
     }
@@ -43,7 +43,7 @@ const routes = [
   {
     path: "/todoList",
     name: "TodoList",
-    component: () => import("../views/TodoList.vue"),
+    component: () => import("../views/nav1/TodoList.vue"),
     meta: {
       title: "TodoList"
     }
@@ -51,7 +51,7 @@ const routes = [
   {
     path: "/vModel",
     name: "VModel",
-    component: () => import("../views/VModel.vue"),
+    component: () => import("../views/nav2/VModel.vue"),
     meta: {
       title: "VModel"
     }
@@ -59,7 +59,7 @@ const routes = [
   {
     path: "/comment",
     name: "Comment",
-    component: () => import("../views/Comment.vue"),
+    component: () => import("../views/nav1/Comment.vue"),
     meta: {
       title: "评论"
     }
@@ -67,7 +67,7 @@ const routes = [
   {
     path: "/vuexx",
     name: "Vuexx",
-    component: () => import("../views/Vuexx.vue"),
+    component: () => import("../views/nav1/Vuexx.vue"),
     meta: {
       title: "Vuexx"
     }
@@ -75,7 +75,7 @@ const routes = [
   {
     path: "/attr",
     name: "Attr",
-    component: () => import("../views/Attr.vue"),
+    component: () => import("../views/nav1/Attr.vue"),
     meta: {
       title: "计算监听属性"
     },
@@ -83,7 +83,7 @@ const routes = [
       {
         path: "/attr/comment",
         name: "attr-comment",
-        component: () => import("../views/Comment.vue"),
+        component: () => import("../views/nav1/Comment.vue"),
         meta: {
           title: "路由-评论"
         }
@@ -91,7 +91,7 @@ const routes = [
       {
         path: "/attr/about",
         name: "attr-about",
-        component: () => import("../views/About.vue"),
+        component: () => import("../views/nav1/About.vue"),
         meta: {
           title: "路由-关于我们"
         }
@@ -102,12 +102,12 @@ const routes = [
     path: "/router",
     name: "Router",
     redirect: "/router/comment",
-    component: () => import("../views/Router.vue"),
+    component: () => import("../views/nav1/Router.vue"),
     children: [
       {
         path: "/router/comment",
         name: "router-comment",
-        component: () => import("../views/Comment.vue"),
+        component: () => import("../views/nav1/Comment.vue"),
         meta: {
           title: "路由-评论"
         }
@@ -115,7 +115,7 @@ const routes = [
       {
         path: "/router/about",
         name: "router-about",
-        component: () => import("../views/About.vue"),
+        component: () => import("../views/nav1/About.vue"),
         meta: {
           title: "路由-关于我们"
         }

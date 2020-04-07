@@ -5,7 +5,7 @@
       enter-active-class="animated jackInTheBox"
       leave-active-class="animated flip"
     >
-      <img alt="Vue logo" src="../assets/logo.png" v-show="flag" />
+      <img alt="Vue logo" src="../../assets/logo.png" v-show="flag" />
     </transition>
     <br />
     <a href="" @click.prevent="page = 'login'">登陆</a> |
