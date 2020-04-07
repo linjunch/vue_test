@@ -1,15 +1,17 @@
 <template>
   <div class="about">
-    <label
-      >name:
-      <!-- @keyup.enter.native="add(name)" -->
-      <el-input style="width:200px" :value="info" @input="setInfo($event)"
-    /></label>
-    <el-button @click="add(info)">添加</el-button>
-    <label>
-      关键字查找：
-      <el-input style="width:200px" v-model="keyWorld" />
-    </label>
+    <div class="serchBox">
+      <label
+        >name:
+        <!-- @keyup.enter.native="add(name)" -->
+        <el-input style="width:200px" :value="info" @input="setInfo($event)"
+      /></label>
+      <el-button @click="add(info)">添加</el-button>
+      <label>
+        关键字查找：
+        <el-input style="width:200px" v-model="keyWorld" />
+      </label>
+    </div>
     <div :class="['tableList']">
       <el-table :data="search()" style="width: 100%">
         <el-table-column prop="id" label="id" width="250"> </el-table-column>
@@ -49,6 +51,10 @@ export default {
 };
 </script>
 <style lang="less">
+.serchBox {
+  display: flex;
+  justify-content: center;
+}
 .tableList {
   // display: inline-block;
   width: 1000px;

@@ -1,22 +1,46 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/" exact>Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/axios">Axios</router-link> |
-      <router-link to="/comment">Comment</router-link> |
-      <router-link to="/attr">Attr</router-link> |
-      <router-link to="/router" exac>Router</router-link> |
-      <router-link to="/lin" exac>Lin</router-link> |
-      <router-link to="/todolist" exac>Todolist</router-link> |
-      <router-link to="/vuexx" exac>Vuexx</router-link>
+      <router-link to="/" exact tag="el-button">Home</router-link>
+      <router-link to="/about" tag="el-button">About</router-link>
+      <router-link to="/axios" tag="el-button">Axios</router-link>
+      <router-link to="/comment" tag="el-button">Comment</router-link>
+      <router-link to="/attr" tag="el-button">Attr</router-link>
+      <router-link to="/router" exac tag="el-button">Router</router-link>
+      <router-link to="/lin" exac tag="el-button">Lin</router-link>
+      <router-link to="/todolist" exac tag="el-button">Todolist</router-link>
+      <router-link to="/vuexx" exac tag="el-button">Vuexx</router-link>
     </div>
-    <div id="nav2"><router-link to="/vModel">v-model</router-link> |</div>
-    <transition enter-active-class="animated lightSpeedIn">
-      <router-view />
-    </transition>
+    <div id="nav2">
+      <router-link to="/vModel" tag="el-button">v-model</router-link>
+      <router-link to="/user/lin" tag="el-button">我的</router-link>
+      <router-link to="/myinfo" tag="el-button">我的信息</router-link>
+    </div>
+    <!-- <transition enter-active-class="animated lightSpeedIn"> -->
+    <router-view />
+    <!-- </transition> -->
   </div>
 </template>
+
+<script>
+export default {
+  name: "App",
+  methods: {
+    // goHome() {
+    //   // 利用的堆栈的形式跳转路由
+    //   this.$router.push("/");
+    //   // 替换当前路由
+    //   this.$router.replace("/");
+    //   // 相当于history.go()
+    //   this.$router.go(-1);
+    //   // 相当于history.back()
+    //   this.$router.back();
+    //   // 相当于history.forward()
+    //   this.$router.forward();
+    // }
+  }
+};
+</script>
 
 <style lang="less">
 #app {

@@ -25,6 +25,22 @@ const routes = [
     component: () => import("../views/nav1/About.vue")
   },
   {
+    path: "/user/:userId",
+    name: "User",
+    meta: {
+      title: "我的"
+    },
+    component: () => import("../views/nav2/User.vue")
+  },
+  {
+    path: "/myinfo/",
+    name: "myinfo",
+    meta: {
+      title: "我的信息"
+    },
+    component: () => import("../views/nav2/MyInfo.vue")
+  },
+  {
     path: "/axios",
     name: "Axios",
     component: () => import("../views/nav1/Axios.vue"),
@@ -125,7 +141,9 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  // 路由模式
+  mode: "hash"
 });
 
 export default router;
