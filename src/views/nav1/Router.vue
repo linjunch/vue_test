@@ -1,7 +1,7 @@
 <template>
   <div class="router">
-    <router-link to="/router/comment">评论</router-link> |
-    <router-link to="/router/about">About</router-link>
+    <router-link to="/router/comment" exact>评论</router-link> |
+    <router-link to="/router/about" exact>About</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -16,17 +16,8 @@ export default {
   methods: {}
 };
 </script>
-<style lang="less">
+<style lang="less" scope>
 .router {
   text-align: center;
-}
-a {
-  font-weight: bold;
-  color: #2c3e50;
-
-  &.router-link-active {
-    // color: #42b983;
-    color: deeppink;
-  }
 }
 </style>

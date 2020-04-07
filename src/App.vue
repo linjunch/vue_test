@@ -1,27 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/" exact tag="el-button">Home</router-link>
-      <router-link to="/about" tag="el-button">About</router-link>
-      <router-link to="/axios" tag="el-button">Axios</router-link>
-      <router-link to="/comment" tag="el-button">Comment</router-link>
-      <router-link to="/attr" tag="el-button">Attr</router-link>
-      <router-link to="/router" exac tag="el-button">Router</router-link>
-      <router-link to="/lin" exac tag="el-button">Lin</router-link>
-      <router-link to="/todolist" exac tag="el-button">Todolist</router-link>
-      <router-link to="/vuexx" exac tag="el-button">Vuexx</router-link>
+    <div class="navBox">
+      <router-link to="/" exact>Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/axios">Axios</router-link>
+      <router-link to="/comment">Comment</router-link>
+      <router-link to="/attr" exact>Attr</router-link>
+      <router-link to="/router">Router</router-link>
+      <router-link to="/lin">Lin</router-link>
+      <router-link to="/todolist">Todolist</router-link>
+      <router-link to="/vuexx">Vuexx</router-link>
+      <router-link to="/vModel">v-model</router-link>
+      <router-link to="/user/lin">我的</router-link>
+      <router-link to="/myinfo">我的信息</router-link>
+      <router-link to="/linxx">linxx</router-link>
+      <router-link to="/lincc">lincc</router-link>
+      <router-link to="/linf">linf</router-link>
+      <router-link to="/slotf">slotf</router-link>
     </div>
-    <div id="nav2">
-      <router-link to="/vModel" tag="el-button">v-model</router-link>
-      <router-link to="/user/lin" tag="el-button">我的</router-link>
-      <router-link to="/myinfo" tag="el-button">我的信息</router-link>
-      <router-link to="/linxx" tag="el-button">linxx</router-link>
-      <router-link to="/lincc" tag="el-button">lincc</router-link>
-      <router-link to="/linf" tag="el-button">linf</router-link>
-      <router-link to="/slotf" tag="el-button">slotf</router-link>
-    </div>
+
     <!-- <transition enter-active-class="animated lightSpeedIn"> -->
-    <router-view />
+    <div class="showBox"><router-view /></div>
     <!-- </transition> -->
   </div>
 </template>
@@ -60,23 +59,35 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-}
-
-#nav,
-#nav2 {
-  text-align: center;
-  padding: 10px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-active {
-      // color: #42b983;
-      color: skyblue;
+  display: flex;
+  align-items: flex-start;
+  .navBox {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    a {
+      display: block;
+      width: 200px;
+      height: 30px;
+      line-height: 30px;
+      padding: 5px;
+      border: 1px solid #ccc;
     }
   }
+  .showBox {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 800px;
+  }
 }
+
+.router-link-active {
+  // color: #42b983;
+  color: skyblue;
+}
+
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com

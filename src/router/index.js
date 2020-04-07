@@ -47,25 +47,7 @@ const routes = [
     component: () => import('../views/nav1/Attr.vue'),
     meta: {
       title: '计算监听属性'
-    },
-    children: [
-      {
-        path: '/attr/comment',
-        name: 'attr-comment',
-        component: () => import('../views/nav1/Comment.vue'),
-        meta: {
-          title: '路由-评论'
-        }
-      },
-      {
-        path: '/attr/about',
-        name: 'attr-about',
-        component: () => import('../views/nav1/About.vue'),
-        meta: {
-          title: '路由-关于我们'
-        }
-      }
-    ]
+    }
   },
   {
     path: '/lin',

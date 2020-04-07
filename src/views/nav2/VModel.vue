@@ -151,7 +151,4 @@ export default {
 #vmodel {
   text-align: center;
 }
-// .bd {
-//   border: 1px solid skyblue;
-// }
 </style>

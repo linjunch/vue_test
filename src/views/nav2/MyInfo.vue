@@ -14,4 +14,8 @@ export default {
 };
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+#myInfo {
+  text-align: center;
+}
+</style>

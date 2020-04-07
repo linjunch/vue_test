@@ -46,4 +46,8 @@ export default {
 };
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+#linf {
+  text-align: center;
+}
+</style>
