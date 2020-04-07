@@ -10,11 +10,11 @@
 
 <script>
 export default {
-  name: "commentBox",
+  name: 'commentBox',
   data() {
     return {
-      name: "",
-      info: ""
+      name: '',
+      info: ''
     };
   },
   props: {
@@ -22,9 +22,9 @@ export default {
   },
   methods: {
     add() {
-      this.$emit("add", this.name, this.info);
-      this.name = "";
-      this.info = "";
+      this.$emit('add', this.name, this.info);
+      this.name = '';
+      this.info = '';
     }
   }
 };

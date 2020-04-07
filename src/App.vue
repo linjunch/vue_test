@@ -14,6 +14,7 @@
       <router-link to="/linxx">linxx</router-link>|
       <router-link to="/lincc">lincc</router-link>|
       <router-link to="/linf">linf</router-link>|
+      <router-link to="/slotf">slotf</router-link>
     </div>
     <!-- <transition enter-active-class="animated lightSpeedIn"> -->
     <router-view />

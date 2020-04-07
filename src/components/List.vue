@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "List",
+  name: 'List',
   data() {
     return {};
   },
@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     del(x) {
-      this.$emit("delete", x);
+      this.$emit('delete', x);
     }
   }
 };

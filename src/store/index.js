@@ -1,23 +1,23 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     num: 0,
-    value: "",
-    name: "",
-    str: ""
+    value: '',
+    name: '',
+    str: ''
   },
   getters: {
-    computeStr: state => "“" + state.str + "”",
+    computeStr: state => '“' + state.str + '”',
     computeName: state => val => (state.name ? val + state.name : state.name),
     computeValue: state =>
       state.value
-        .split("")
+        .split('')
         .reverse()
-        .join("")
+        .join('')
   },
   mutations: {
     addNum(state, value) {
