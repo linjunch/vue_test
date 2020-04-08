@@ -16,8 +16,11 @@ export default {
   methods: {}
 };
 </script>
-<style lang="less" scope>
+<style lang="less" scoped>
 .router {
   text-align: center;
+}
+.router-link-exact-active {
+  color: deeppink;
 }
 </style>

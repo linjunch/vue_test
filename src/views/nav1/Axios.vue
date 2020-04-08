@@ -32,7 +32,7 @@
 import { mapState, mapMutations, mapActions } from 'vuex';
 
 export default {
-  name: 'Axios',
+  name: 'Axiosx',
   data() {
     return {
       keyWorld: ''

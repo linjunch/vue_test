@@ -11,6 +11,10 @@ const routes = [
   // this is nav1
   {
     path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     name: 'Home',
     component: Home,
     meta: {
@@ -50,6 +54,31 @@ const routes = [
     }
   },
   {
+    path: '/router',
+    name: 'Router',
+    redirect: '/router/comment',
+    component: () => import('../views/nav1/Router.vue'),
+    children: [
+      {
+        // 子路由不加/
+        path: 'comment',
+        name: 'router-comment',
+        component: () => import('../views/nav1/Comment.vue'),
+        meta: {
+          title: '路由-评论'
+        }
+      },
+      {
+        path: 'about',
+        name: 'router-about',
+        component: () => import('../views/nav1/About.vue'),
+        meta: {
+          title: '路由-关于我们'
+        }
+      }
+    ]
+  },
+  {
     path: '/lin',
     name: 'Lin',
     component: () => import('../views/nav1/Lin.vue'),
@@ -63,6 +92,14 @@ const routes = [
     component: () => import('../views/nav1/TodoList.vue'),
     meta: {
       title: 'TodoList'
+    }
+  },
+  {
+    path: '/vuexx',
+    name: 'Vuexx',
+    component: () => import('../views/nav1/Vuexx.vue'),
+    meta: {
+      title: 'Vuexx'
     }
   },
   // the next is nav2
@@ -83,7 +120,7 @@ const routes = [
     component: () => import('../views/nav2/User.vue')
   },
   {
-    path: '/myinfo/',
+    path: '/myinfo',
     name: 'myinfo',
     meta: {
       title: '我的信息'
@@ -118,38 +155,6 @@ const routes = [
   },
 
   {
-    path: '/vuexx',
-    name: 'Vuexx',
-    component: () => import('../views/nav1/Vuexx.vue'),
-    meta: {
-      title: 'Vuexx'
-    }
-  },
-  {
-    path: '/router',
-    name: 'Router',
-    redirect: '/router/comment',
-    component: () => import('../views/nav1/Router.vue'),
-    children: [
-      {
-        path: '/router/comment',
-        name: 'router-comment',
-        component: () => import('../views/nav1/Comment.vue'),
-        meta: {
-          title: '路由-评论'
-        }
-      },
-      {
-        path: '/router/about',
-        name: 'router-about',
-        component: () => import('../views/nav1/About.vue'),
-        meta: {
-          title: '路由-关于我们'
-        }
-      }
-    ]
-  },
-  {
     path: '/slotf',
     name: 'Slotf',
     component: () => import('../views/f&c/Slotf.vue'),
@@ -164,5 +169,17 @@ const router = new VueRouter({
   // 路由模式
   mode: 'hash'
 });
+
+router.beforeEach((to, from, next) => {
+  /* 路由发生变化修改页面title */
+  if (to.meta.title) {
+    document.title = to.meta.title;
+  }
+  next();
+});
+
+// router.afterEach((to, from) => {
+//   console.log(`路由从${from.name}跳转到了${to.name}`);
+// });
 
 export default router;

@@ -1,6 +1,7 @@
 <template>
   <div id="myInfo">
-    <!-- <h2>用户：{{ userId }}</h2> -->
+    <el-button @click="logInfo">showinfo</el-button>
+    <el-button @click="logId">showid</el-button>
   </div>
 </template>
 
@@ -10,7 +11,22 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    logInfo() {
+      console.log(this.info);
+    },
+    logId() {
+      console.log(this.id);
+    }
+  },
+  computed: {
+    info() {
+      return this.$route.query;
+    },
+    id() {
+      return this.$route.params.id;
+    }
+  }
 };
 </script>
 

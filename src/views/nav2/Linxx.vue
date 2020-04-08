@@ -1,5 +1,7 @@
 <template>
-  <div id="linxx">this is linxx</div>
+  <div id="linxx">
+    <h2>this is linxx</h2>
+  </div>
 </template>
 
 <script type="text/javascript">
